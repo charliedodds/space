@@ -1,20 +1,54 @@
 .NewPlanetForm {
   text-align: left;
-  width: 50%;
-  margin: 0 auto 2rem;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 1rem;
   color: white;
 
-  .inputContainer {
+  .inputContainer,
+  .checkboxContainer {
     display: flex;
     flex-direction: column;
-    margin: 2rem 0;
+    margin-bottom: 2rem;
 
     label {
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
+
+    input {
+      font-size: inherit;
+      font-family: inherit;
+      padding: 0.25rem 0.5rem;
+    }
+
+    input[type='checkbox'] {
+      transform: scale(2);
+      margin-left: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .checkboxContainer {
+    flex-direction: row;
+    align-items: baseline;
   }
 
   .btnContainer {
     text-align: center;
+
+    button {
+      font-size: 1.6rem;
+      font-family: inherit;
+      padding: 1rem;
+      border-radius: 12px;
+      border: 0;
+      background-color: silver;
+    }
+  }
+}
+
+@media screen and (min-width: 899.98px) {
+  .NewPlanetForm {
+    width: 50%;
   }
 }

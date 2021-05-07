@@ -1,5 +1,5 @@
 .PlanetsTable {
-  width: 80%;
+  width: 100%;
   margin: 3rem auto;
   color: white;
 
@@ -16,5 +16,22 @@
 
   .newPlanetContainer {
     text-align: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+
+    .toggleFormBtn {
+      font-size: 2rem;
+      font-family: inherit;
+      padding: 1rem;
+      border-radius: 12px;
+      border: 0;
+      background-color: silver;
+    }
+  }
+}
+
+@media screen and (min-width: 899.98px) {
+  .PlanetsTable {
+    width: 80%;
   }
 }

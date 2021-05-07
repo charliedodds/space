@@ -66,7 +66,7 @@ const NewPlanetForm = ({ getPlanets, setShowForm }) => {
           required
         />
       </section>
-      <section className={styles.inputContainer}>
+      <section className={styles.checkboxContainer}>
         <label htmlFor="hasKnownLife">Has Known Life</label>
         <input
           onChange={handleChange}

@@ -1,0 +1,20 @@
+.NewPlanetForm {
+  text-align: left;
+  width: 50%;
+  margin: 0 auto 2rem;
+  color: white;
+
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+
+    label {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .btnContainer {
+    text-align: center;
+  }
+}

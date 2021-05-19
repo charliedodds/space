@@ -2,10 +2,10 @@ import React from 'react';
 import styles from './Planet.module.scss';
 
 const Planet = ({ planet, getPlanets }) => {
-  const { id, name, hasKnownLife, type, noOfMoons } = planet;
+  const { _id, id, name, hasKnownLife, type, noOfMoons } = planet;
 
   const sendDeleteRequest = () => {
-    fetch(`https://chaz-planet-api.herokuapp.com/planets/${id}`, {
+    fetch(`https://chaz-planet-api.herokuapp.com/planets/${_id}`, {
       method: 'DELETE',
     })
       .then(() => {

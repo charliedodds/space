@@ -25,7 +25,7 @@ const PlanetsTable = ({ planets, getPlanets }) => {
       <section className={styles.container}>
         {planets &&
           planets.map((planet) => (
-            <Planet key={planet.id} planet={planet} getPlanets={getPlanets} />
+            <Planet key={planet._id} planet={planet} getPlanets={getPlanets} />
           ))}
       </section>
       <section className={styles.newPlanetContainer}>

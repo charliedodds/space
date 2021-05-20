@@ -1,35 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
 .App {
+  color: white;
+  background-color: #00000055;
+  min-height: 100%;
+  padding: 4rem 1rem 2rem;
   .header {
     text-align: center;
-    color: white;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-family: 'Share Tech', sans-serif;
+
+    .space {
+      display: block;
+    }
   }
 
   .rocket {
     background: 0;
     border: 0;
-    font-size: 10rem;
-    color: silver;
+    font-size: 15rem;
+    color: #edece8;
     display: block;
     margin: auto;
     position: absolute;
-    top: 15vh;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
   }
 
   .blastOff {
     background: 0;
     border: 0;
-    font-size: 10rem;
-    color: silver;
+    font-size: 15rem;
+    color: #edece8;
     display: block;
     margin: auto;
     position: absolute;
-    top: 15vh;
+    top: 50%;
     left: 50%;
-    transition: all 1s;
-    transform: translate(50vw, -50vh) scale(0);
+    transition: all 2s;
+    transform: translate(100vw, -100vh) scale(0);
     opacity: 0;
+  }
+
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

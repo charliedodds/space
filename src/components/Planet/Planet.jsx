@@ -1,8 +1,16 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faMoon,
+  faUserCheck,
+  faUserTimes,
+  faMountain,
+} from '@fortawesome/free-solid-svg-icons';
+
 import styles from './Planet.module.scss';
 
 const Planet = ({ planet, getPlanets }) => {
-  const { _id, id, name, hasKnownLife, type, noOfMoons } = planet;
+  const { _id, imgURL, name, hasKnownLife, type, noOfMoons } = planet;
 
   const sendDeleteRequest = () => {
     fetch(`https://chaz-planet-api.herokuapp.com/planets/${_id}`, {
@@ -16,11 +24,22 @@ const Planet = ({ planet, getPlanets }) => {
   };
   return (
     <article className={styles.Planet}>
-      <p>{id}</p>
-      <h4>{name}</h4>
-      <p>{hasKnownLife ? 'true' : 'false'}</p>
-      <p>{type}</p>
-      <p>{noOfMoons}</p>
+      {/* <p>{id}</p> */}
+      <img src={imgURL} alt={name} />
+      <h3>{name}</h3>
+      <section className={styles.info}>
+        <div className={hasKnownLife ? styles.green : styles.red}>
+          <FontAwesomeIcon icon={hasKnownLife ? faUserCheck : faUserTimes} />
+        </div>
+        <div>
+          <FontAwesomeIcon icon={faMountain} />
+          <p>{type}</p>
+        </div>
+        <div>
+          <FontAwesomeIcon icon={faMoon} />
+          <p>{noOfMoons}</p>
+        </div>
+      </section>
       <button onClick={sendDeleteRequest}>Delete</button>
     </article>
   );

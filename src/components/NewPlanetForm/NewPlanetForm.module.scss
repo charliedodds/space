@@ -2,8 +2,8 @@
   text-align: left;
   width: 100%;
   margin: 2rem auto;
-  padding: 1rem;
   color: white;
+  font-size: 2rem;
 
   .inputContainer,
   .checkboxContainer {
@@ -18,12 +18,12 @@
     input {
       font-size: inherit;
       font-family: inherit;
-      padding: 0.25rem 0.5rem;
+      padding: 1rem 2rem;
     }
 
     input[type='checkbox'] {
       transform: scale(2);
-      margin-left: 1rem;
+      margin-left: 3rem;
       cursor: pointer;
     }
   }

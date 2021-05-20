@@ -34,7 +34,9 @@ const App = () => {
   return (
     <div className={styles.App}>
       <header className={styles.header}>
-        <h1>Space: The Final Frontend</h1>
+        <h1>
+          <span className={styles.space}>Space:</span> The Final Frontend
+        </h1>
       </header>
       <button
         style={rocketStylesObj}
@@ -43,8 +45,14 @@ const App = () => {
       >
         <FontAwesomeIcon icon={faRocket} />
       </button>
-      {showPlanets && (
+      {showPlanets && planets ? (
         <PlanetsTable planets={planets} getPlanets={getPlanets} />
+      ) : showPlanets ? (
+        <section className={styles.loading}>
+          <p>Loading...</p>
+        </section>
+      ) : (
+        ''
       )}
     </div>
   );

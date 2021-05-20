@@ -7,9 +7,10 @@ const NewPlanetForm = ({ getPlanets, setShowForm }) => {
     hasKnownLife: false,
     type: '',
     noOfMoons: 0,
+    imgURL: '',
   });
 
-  const { name, hasKnownLife, type, noOfMoons } = inputValues;
+  const { name, hasKnownLife, type, noOfMoons, imgURL } = inputValues;
 
   const handleChange = (e) => {
     if (e.target.type === 'checkbox') {
@@ -30,6 +31,7 @@ const NewPlanetForm = ({ getPlanets, setShowForm }) => {
       hasKnownLife: false,
       type: '',
       noOfMoons: 0,
+      imgURL: '',
     });
     setShowForm(false);
   };
@@ -95,6 +97,17 @@ const NewPlanetForm = ({ getPlanets, setShowForm }) => {
           name="noOfMoons"
           id="noOfMoons"
           value={noOfMoons}
+          required
+        />
+      </section>
+      <section className={styles.inputContainer}>
+        <label htmlFor="imgURL">Image URL</label>
+        <input
+          onChange={handleChange}
+          type="text"
+          name="imgURL"
+          id="imgURL"
+          value={imgURL}
           required
         />
       </section>
